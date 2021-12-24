@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+body{
+   		 background:url(debg.png) no-repeat ;
+   		background-size: 100% 117% !important;
+		}
 .lr_auto{margin-left:auto;margin-right:auto;}
 .pad-bt0{
     padding-bottom:0 !important; 
