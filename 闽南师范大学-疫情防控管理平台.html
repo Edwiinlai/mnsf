@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <!-- saved from url=(0197)http://dxg.mnnu.edu.cn/SPCP/Web/PersonActivity/MonitoringCard?wr5MeCXXNyUYubNv08_ICG4v4IqSqjrjmVvYKQdg0GZNnjxqO0-u8Wqn7kW0gK4UEFGwV1R3Ja9nfnopLTsa2QvTd8lQBO7c-fDb6EmGJ2XU4-BqugHodVj41UOZ1L9U.shtml= -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+      window.onload=function () {
+        document.addEventListener('touchstart',function (event) {
+          if(event.touches.length>1){
+            event.preventDefault();
+          }
+        });
+        var lastTouchEnd=0;
+        document.addEventListener('touchend',function (event) {
+          var now=(new Date()).getTime();
+          if(now-lastTouchEnd<=300){
+            event.preventDefault();
+          }
+          lastTouchEnd=now;
+        },false);
+        document.addEventListener('gesturestart', function (event) {
+          event.preventDefault();
+        });
+      }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="renderer" content="webkit">
     <link href="./闽南师范大学-疫情防控管理平台_files/index.css" rel="stylesheet">
@@ -9,7 +28,14 @@
     <script src="./闽南师范大学-疫情防控管理平台_files/validation.js.下载"></script>
     <link href="./闽南师范大学-疫情防控管理平台_files/layer.css" rel="stylesheet">
     <script src="./闽南师范大学-疫情防控管理平台_files/layer.js.下载"></script><link rel="stylesheet" href="./闽南师范大学-疫情防控管理平台_files/layer(1).css" id="layuicss-layer">
-    <title>闽南师范大学-疫情防控管理平台</title>
+   <title>闽南师范大学-疫情防控管理平台</title>
+ <style>
+		body {
+   		 background: url(闽南师范大学-疫情防控管理平台_files/debg.png) no-repeat;
+	background-size: 100% 117% !important;
+	
+		}
+	</style>
     <script type="text/javascript">
         /*解决苹果返回不刷新问题*/
         $(function () {
@@ -26,7 +52,9 @@
     </script>
 </head>
 <body>
-    
+   			
+   
+   		
 
 <div class="logo">
     <img src="./闽南师范大学-疫情防控管理平台_files/logo.png">
@@ -97,6 +125,6 @@ document.write(new Date().format("yyyy.MM.dd HH:mm"));
             </nav>
         </div>
 
-
+ 
 <!--第二版-->
 </body></html>
